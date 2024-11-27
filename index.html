@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div>
+                    <input type="text" class="afficheur" name="resultat">
+                </div>
+                <div>
+                    <input type="text" readonly value="AC" onclick="resultat.value =''" class="operateur">
+                    <input type="text" readonly value="DE" onclick="resultat.value = resultat.value.toString().slice(0,-1)" class="operateur">
+                    <input type="text" readonly value="." onclick="resultat.value +='.'" class="operateur">
+                    <input type="text" readonly value="/" onclick="resultat.value +='/'" class="operateur">
+                </div>
+                <div>
+                    <input type="text" readonly value="7" onclick="resultat.value +='7'">
+                    <input type="text" readonly value="8" onclick="resultat.value +='8'">
+                    <input type="text" readonly value="9" onclick="resultat.value +='9'">
+                    <input type="text" readonly value="*" onclick="resultat.value +='*'" class="operateur">
+                </div>
+                <div>
+                    <input type="text" readonly value="4" onclick="resultat.value +='4'">
+                    <input type="text" readonly value="5" onclick="resultat.value +='5'">
+                    <input type="text" readonly value="6" onclick="resultat.value +='6'">
+                    <input type="text" readonly value="-" onclick="resultat.value +='-'" class="operateur">
+                </div>
+                <div>
+                    <input type="text" readonly value="1" onclick="resultat.value +='1'">
+                    <input type="text" readonly value="2" onclick="resultat.value +='2'">
+                    <input type="text" readonly value="3" onclick="resultat.value +='3'">
+                    <input type="text" readonly value="+" onclick="resultat.value +='+'" class="operateur">
+                </div>
+                <div>
+                    <input type="text" readonly value="00" onclick="resultat.value +='00'">
+                    <input type="text" readonly value="0" onclick="resultat.value +='0'">
+                    <input type="text" readonly value="=" onclick=" resultat.value = eval(resultat.value)" class="equal"> 
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./calc.js"></script> 
+</body>
+</html>
