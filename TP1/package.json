@@ -1,0 +1,7 @@
+{
+    "name" : "nom",
+    "version" : "1.0",
+    "script": {
+        "start" : "live-server"
+    }
+}
